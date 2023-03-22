@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import Chatbox from "./pages/Chatbox";
 import Login from "./pages/Login";
 
@@ -5,9 +6,10 @@ function App() {
 
   return (
     <div>
-      <Chatbox />
-      {/* <Login /> */}
-    
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/chat" element={<Chatbox />} />
+      </Routes>
     </div>
   )
 }
