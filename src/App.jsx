@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
 import Chatbox from "./pages/Chatbox";
 import Login from "./pages/Login";
 import { ChatRoute } from "./routes/ChatRoute";
@@ -6,7 +7,7 @@ import { ChatRoute } from "./routes/ChatRoute";
 function App() {
 
   return (
-    <div>
+    <AuthProvider>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route 
@@ -18,7 +19,7 @@ function App() {
         }
        />
       </Routes>
-    </div>
+    </AuthProvider>
   )
 }
 

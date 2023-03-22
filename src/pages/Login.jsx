@@ -1,4 +1,10 @@
+import { UserAuth } from "../context/AuthContext"
+
 const Login = () => {
+
+    const { currentUser } = UserAuth();
+    console.log(currentUser);
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content text-center">
