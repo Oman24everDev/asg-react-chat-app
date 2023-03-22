@@ -6,11 +6,13 @@ const Chat = () => {
   const messages = [
     {
       id: 1,
-      message: "Hello there!"
+      text: "Hello there!",
+      name: "Maria"
     },
     {
       id: 2,
-      message: "Hi,,,"
+      text: "Hi,,,",
+      name: "Joseph"
     }
   ]
 
