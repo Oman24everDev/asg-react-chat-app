@@ -1,10 +1,13 @@
+import Chatbox from "./pages/Chatbox";
 import Login from "./pages/Login";
 
 function App() {
 
   return (
     <div>
-      <Login />
+      <Chatbox />
+      {/* <Login /> */}
+    
     </div>
   )
 }

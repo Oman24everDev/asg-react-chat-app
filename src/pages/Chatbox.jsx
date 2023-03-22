@@ -1,6 +1,14 @@
+import Chat from "../components/Chat"
+import Navbar from "../components/Navbar"
+import SendMessage from "../components/SendMessage"
+
 const Chatbox = () => {
   return (
-    <div>Chatbox</div>
+    <div>
+      <Navbar />
+      <Chat />
+      <SendMessage />
+    </div>
   )
 }
 

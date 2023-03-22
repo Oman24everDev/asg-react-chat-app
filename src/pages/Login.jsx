@@ -4,7 +4,7 @@ const Login = () => {
             <div className="hero-content text-center">
                 <div className="max-w-md">
                     <h1 className="text-5xl font-bold">ASG Chat 💬</h1>
-                    <button className="btn gap-2 mt-6">
+                    <button className="btn btn-primary-focus bg-blue-900 gap-2 mt-6 text-white">
                         Login with
                         <svg width="25px"viewBox="-0.5 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
