@@ -13,7 +13,7 @@ const Chat = () => {
   }
 
   useEffect(scrollToBottom, [messages])
-  
+
   // for test purposes
   // const messages = [
   //   {
@@ -48,6 +48,7 @@ const Chat = () => {
 
   return (
     <div className="containerWrap pb-40 pt-20">
+       <p className="font-bold text-2xl text-center">Welcome! This is the start of history chat! 💬</p>
       {messages.map(message => (
         <Message key={message.id} message={message} />
       ))}
