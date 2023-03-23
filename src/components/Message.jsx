@@ -12,7 +12,11 @@ const Message = ({ message }) => {
 
     const handleDelete = async (id) => {
         // console.log(id);
-        await deleteDoc(doc(db, 'messages', id))
+        if (message.uid === currentUser.uid) {
+          await deleteDoc(doc(db, 'messages', id))
+        } else {
+            alert("You don't have permit to delete this message!");
+        }
     }
 
     return (
@@ -30,7 +34,7 @@ const Message = ({ message }) => {
                 <div className="chat-bubble">{message.text}</div>
                 <div className="tooltip tooltip-error tooltip-right mt-2" data-tip="delete?">
                     <button onClick={() => handleDelete(message.id)} className="btn btn-xs bg-white border-none text-black hover:bg-white">. . .</button>
-                </div>
+                </div> 
             </div>
         </div>
     )
