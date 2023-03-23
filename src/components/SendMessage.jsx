@@ -13,6 +13,7 @@ const SendMessage = () => {
 
     if (value.trim() === "") {
       alert("Enter valid message!");
+      setValue("");
       return;
     }
 

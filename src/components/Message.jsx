@@ -1,6 +1,5 @@
 import { UserAuth } from "../context/AuthContext";
 import { doc, deleteDoc } from "firebase/firestore";
-import { async } from "@firebase/util";
 import { db } from "../database/firebase";
 
 
@@ -32,9 +31,10 @@ const Message = ({ message }) => {
                     {message.name}
                 </div>
                 <div className="chat-bubble">{message.text}</div>
-                <div className="tooltip tooltip-error tooltip-right mt-2" data-tip="delete?">
+                <div className="tooltip tooltip-error tooltip-left mt-2" data-tip="delete?">
                     <button onClick={() => handleDelete(message.id)} className="btn btn-xs bg-white border-none text-black hover:bg-white">. . .</button>
-                </div> 
+                </div>
+                <span>{message.createdAt?.toDate().toLocaleTimeString()}</span>
             </div>
         </div>
     )
