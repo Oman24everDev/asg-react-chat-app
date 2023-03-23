@@ -1,12 +1,19 @@
 import Message from "./Message"
 import { collection, query, onSnapshot, orderBy, limit } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { db } from "../database/firebase";
 
 const Chat = () => {
 
+  const messageEndRef = useRef();
   const [messages, setMessages] = useState([]);
 
+  const scrollToBottom = () => {
+    messageEndRef.current.scrollIntoView({ behavior: "smooth" })
+  }
+
+  useEffect(scrollToBottom, [messages])
+  
   // for test purposes
   // const messages = [
   //   {
@@ -44,6 +51,7 @@ const Chat = () => {
       {messages.map(message => (
         <Message key={message.id} message={message} />
       ))}
+      <div ref={messageEndRef}></div>
     </div>
   )
 }
